@@ -41,6 +41,14 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+$(function () {
+    $("#loading").fadeOut(3000, repeat());
+
+    function repeat() {
+        $("#loading").fadeTo(3000, 0).delay(500).fadeTo(3000, 1).fadeOut(3000)
+    }});
+
+
 (function (root, factory) {
     // check to see if 'knockout' AMD module is specified if using requirejs
     if (typeof define === 'function' && define.amd &&
